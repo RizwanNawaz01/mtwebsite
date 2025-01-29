@@ -36,23 +36,17 @@
             default:"component"
         }
     })
-    const diaries = [
-        {
-            id:1,
-            img:"/diary/49.jpg",
-            heading:"Where you start doesn’t define",
-            text:"Diary of a Founder #49 A few decades ago, Dubai was a modest trading port in the desert—limited resources, no global recognition, and no reason...",
-            link:"https://muhammadtariq.org/where-you-start-doesnt-define-you-dubai-proved-that"
-        },
-        
-        {
-            id:2,
-            img:"/diary/47.jpg",
-            heading:"Why are we so afraid of failure?",
-            text:"Diary of a Founder #47 We see endless wins online, but no one mentions the obstacles or heartbreaks that came first. And yet, no one...",
-            link:"https://muhammadtariq.org/where-you-start-doesnt-define-you-dubai-proved-that"
-        }
-    ]
+
+    const diaries = ref([]);
+        onMounted(async ()=>{
+            if(props.design == 'page'){
+                diaries.value= await $fetch('/api/entry') 
+            }else{
+                const response = await $fetch('/api/entry')
+                diaries.value = response.slice(0,2) 
+            }
+        }) 
+ 
 </script>
 
 <style  scoped>

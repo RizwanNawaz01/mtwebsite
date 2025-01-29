@@ -12,10 +12,10 @@
     </div>
 
     <div class="pb-4 mt-4 mb-2 " v-else>
-        <div class="mt-10 transition-all lg:px-8 hover:mt-4"> 
+        <div class="mt-10 lg:px-8 "> 
                 <div class="max-w-sm bg-white shadow-sm ">
                     <a href="#" class="overflow-hidden">
-                        <NuxtImg  :src="img" sizes="100vw sm:70vw md:385px"  densities="x1 x2"  alt="" />
+                        <NuxtImg  :src="img"   width="800"    height="800"    :style="{ objectFit: 'cover' }"    densities="x1 x2"  alt="" />
                     </a>
                     <div class="pt-2 pb-0">
                         <a href="#">
