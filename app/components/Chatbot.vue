@@ -63,7 +63,7 @@ const chats = ref([
   }, 1000);
 
     }
-    const token = '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';
+    const token = '';
     const  getResponseFromAI = async (messageUser)=>{
         
         try{
