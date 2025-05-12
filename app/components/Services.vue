@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-[90px] pb-[50px] ">
-        <h4 class="text-4xl font-bold text-center font-Roboto">Explore More</h4>
+    <div class="mt-[90px] pb-[50px]">
+        <h4 class="text-4xl font-bold text-center text-white font-Roboto">Explore More</h4>
         <div class="flex flex-col items-center space-x-0 md:flex-row">
             <ServiceBox v-for="service in services" :key="service['id']" :image="service['image']" :text="service['text']" :description="service['description']" />
             

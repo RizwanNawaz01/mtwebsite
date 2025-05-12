@@ -24,6 +24,13 @@ model Entries {
   id      Int    @id @unique @default(autoincrement())
   img     String
   heading String
-  text    String
-  link    String
+  text    String @db.MediumText
+  incept  String @db.MediumText
+  link    String @unique
+}
+
+model Users {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
 }

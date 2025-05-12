@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-black">
         <HeroBanner first_name="Muhammad" last_name="Tariq" img="bg-[url(/hero_banner/mobile/homepage.png)] md:bg-[url(/hero_banner/homepage.png)]" /> 
         <About />
         <Services />

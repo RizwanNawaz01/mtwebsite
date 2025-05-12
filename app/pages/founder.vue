@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div class="bg-black">
         <HeroBanner  first_name="DOAF Foundation" last_name="DOAF Foundation" img="bg-[url(/hero_banner/foundation.png)]" /> 
-        <div class="flex justify-center items-center  mt-24">
-            <div class=" w-3/5  flex flex-col items-center justify-center text-center">
+        <div class="flex items-center justify-center mt-24">
+            <div class="flex flex-col items-center justify-center w-full text-center md:w-3/5 ">
                 <NuxtImg src="logo/foundation.svg" class="h-20 mb-16"/>
             <div class="text-center">
-                <h4 class="text-4xl font-bold">Tariq has established the Diary of a Founder Foundation                </h4>
-                <p class="text-2xl">with a heartfelt purpose: to support struggling entrepreneurs. Through this foundation, he provides education, training, and access to essential services like legal, corporate, taxation, accounting, and mentorship—ensuring that those who need it most have the resources to turn their dreams into reality.</p>
+                <h4 class="text-3xl font-bold text-white md:text-4xl">Tariq has established the Diary of a Founder Foundation                </h4>
+                <p class="mt-2 text-white md:mt-0 text-1xl md:text-2xl">with a heartfelt purpose: to support struggling entrepreneurs. Through this foundation, he provides education, training, and access to essential services like legal, corporate, taxation, accounting, and mentorship—ensuring that those who need it most have the resources to turn their dreams into reality.</p>
             </div>
             </div> 
         </div>
@@ -15,28 +15,14 @@
         <DiaryEntries />
     </div>
 </template>
-
 <script setup>
-    const podcasts = [
-        {
-            id:1,
-            image:'/podcasts/18.png',
-            youtube:'https://youtu.be/9umqog_DpJQ?si=gtm9lSNSnjCXun73',
-            spotify:'https://open.spotify.com/episode/1kxLZDnXpvfTlXYTRY4xvY?si=bitJWcpPS5u_XLlYTc-25g',
-        },
-        {
-            id:2,
-            image:'/podcasts/17.png',
-            youtube:'https://www.youtube.com/watch?v=MfIPCwJMweM',
-            spotify:'https://open.spotify.com/episode/4rErqhQZS3F7B10ATPOACa?si=xuKx66EPTCa1cJcfQL5SVw',
-        },
-        {
-            id:3,
-            image:'/podcasts/16.png',
-            youtube:'https://youtu.be/HwRmQDDDfkc?si=em1TxGaWKGS1e1Pm',
-            spotify:'https://open.spotify.com/episode/1gEg6iJ2iYQCfOT9axsDtQ?si=WxubMILnS-aW-flM84cZrA',
-        }, 
-    ]
+ import { ref, onMounted } from 'vue';
+    const podcasts = ref([]);
+        onMounted(async ()=>{
+           const podcasts_response = await $fetch('/api/podcast')
+           podcasts.value  = podcasts_response.slice(0,3); 
+           
+        }) 
 </script>
 
 <style lang="scss" scoped>

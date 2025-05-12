@@ -18,7 +18,7 @@
     <!-- Heading -->
     <div class="flex flex-col space-y-1.5 pb-6 z-[99999]">
       <h2 class="text-lg font-semibold tracking-tight">Chat with Tariq</h2>
-      <p class="text-sm text-[#6b7280] leading-3">Powered by InZone</p>
+      <p class="text-sm text-[#6b7280] leading-3">Poweyellow by InZone</p>
     </div>
     <div class="w-full" > 
             <Response :responses="currentChat.responses" />
@@ -63,7 +63,7 @@ const chats = ref([
   }, 1000);
 
     }
-    const token = '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';
+    const token = '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';
     const  getResponseFromAI = async (messageUser)=>{
         
         try{

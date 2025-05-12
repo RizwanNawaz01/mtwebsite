@@ -1,6 +1,6 @@
 <template>
     <div> 
-        <p class="text-red text-center font-bold">{{ description }}</p>
+        <p class="text-yellow text-center font-bold">{{ description }}</p>
         <h4 class="font-Roboto text-center text-4xl font-bold">{{ text }}</h4>
     </div>
 </template>

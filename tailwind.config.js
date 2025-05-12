@@ -3,7 +3,7 @@ export default {content: ["./index.html", "./src/**/*.{vue,js,ts}"],
   theme: {
     extend: {
       colors: {  
-        "red": "#d80e0e", 
+        "yellow": "#f3e91e", 
       },
     },
     fontFamily: {

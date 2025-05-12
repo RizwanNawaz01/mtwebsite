@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     scanPageMeta: 'after-resolve',
-    sharedPrerenderData: false,
+    shayellowPrerenderData: false,
     compileTemplate: true,
     resetAsyncDataToUndefined: true,
     templateUtils: true,
@@ -28,6 +28,9 @@ export default defineNuxtConfig({
       omitLineBreaks: false
     }
   },
+  plugins: [
+    '~/plugins/sweetalert2.client.js',
+  ],
   googleFonts: {
     families: {
       Roboto: true,
@@ -38,6 +41,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/image',
     '@nuxt/icon',
-    '@prisma/nuxt'
-  ]
+    '@prisma/nuxt',
+    'six-dropzone',
+  ],
+
 })
